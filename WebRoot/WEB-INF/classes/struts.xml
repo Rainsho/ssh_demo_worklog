@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant> -->
+
+	<package name="pk" namespace="/" extends="struts-default">
+		<action name="login" class="UserAction" method="login">
+			<result name="success" type="redirectAction">
+				<param name="actionName">getlogs</param>
+				<param name="method">findLogs</param>
+			</result>
+			<result name="input">/index.jsp</result>
+		</action>
+		<action name="logout" class="UserAction" method="logout">
+			<result type="redirect">/index.jsp</result>
+		</action>
+
+		<action name="getlogs" class="LogAction" method="findLogs">
+			<result name="success">/logs.jsp</result>
+		</action>
+		<action name="logadd" class="LogAction" method="addLog">
+			<result name="success" type="redirectAction">
+				<param name="actionName">getlogs</param>
+				<param name="method">findLogs</param>
+			</result>
+		</action>
+		<action name="findbyid" class="LogAction" method="findById">
+			<result name="success" type="redirectAction">
+				<param name="actionName">getlogs</param>
+				<param name="method">findLogs</param>
+			</result>
+		</action>
+		<action name="logupdate" class="LogAction" method="logUpdate">
+			<result name="success" type="redirectAction">
+				<param name="actionName">getlogs</param>
+				<param name="method">findLogs</param>
+			</result>
+		</action>
+	</package>
+</struts>
