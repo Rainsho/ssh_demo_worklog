@@ -1,6 +1,9 @@
 package com.rainsho.entity;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
+import javax.enterprise.inject.New;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -102,6 +105,11 @@ public class Logs implements java.io.Serializable {
 
 	public void setCreatetime(Timestamp createtime) {
 		this.createtime = createtime;
+	}
+
+	public String fmt() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		return sdf.format(createtime);
 	}
 
 }

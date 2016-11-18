@@ -10,7 +10,8 @@
 	<bean id="aop" class="com.rainsho.aop.LoginCheck"></bean>
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
-		<property name="url" value="jdbc:mysql://localhost:3306/etc_log"></property>
+		<property name="url"
+			value="jdbc:mysql://localhost:3306/etc_log?useSSL=false&amp;characterEncoding=UTF-8"></property>
 		<property name="username" value="root"></property>
 		<property name="password" value="rain@sql"></property>
 	</bean>

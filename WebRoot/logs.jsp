@@ -43,7 +43,7 @@
 			<c:forEach var="l" items="${requestScope.logs }">
 				<p style="margin: 5px 0;">
 					<a href="findbyid.action?id=${l.lid }">${l.users.realname
-						}_${l.createtime }</a>
+						}_${l.fmt() }</a>
 				</p>
 			</c:forEach>
 		</div>
