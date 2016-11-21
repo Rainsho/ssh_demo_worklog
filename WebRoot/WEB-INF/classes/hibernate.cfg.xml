@@ -16,12 +16,14 @@
 		<property name="connection.password">rain@sql</property>
 		<property name="connection.useSSL">false</property>
 		<property name="connection.characterEncoding">UTF-8</property>
+		<property name="connection.autocommit">true</property>
 		<property name="connection.driver_class">
 			com.mysql.jdbc.Driver
 		</property>
 		<property name="myeclipse.connection.profile">
 			mysql_etc_log
 		</property>
+		
 		<mapping class="com.rainsho.entity.Logs" />
 		<mapping class="com.rainsho.entity.Users" />
 

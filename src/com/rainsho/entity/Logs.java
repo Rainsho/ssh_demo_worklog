@@ -3,7 +3,6 @@ package com.rainsho.entity;
 import java.sql.Timestamp;
 import java.text.SimpleDateFormat;
 
-import javax.enterprise.inject.New;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
