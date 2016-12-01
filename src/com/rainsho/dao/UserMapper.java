@@ -1,17 +1,22 @@
 package com.rainsho.dao;
 
+import org.springframework.stereotype.Repository;
+
 import com.rainsho.entity.User;
 
+@Repository
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer uid);
+	int deleteByPrimaryKey(Integer uid);
 
-    int insert(User record);
+	int insert(User record);
 
-    int insertSelective(User record);
+	int insertSelective(User record);
 
-    User selectByPrimaryKey(Integer uid);
+	User selectByPrimaryKey(Integer uid);
 
-    int updateByPrimaryKeySelective(User record);
+	int updateByPrimaryKeySelective(User record);
 
-    int updateByPrimaryKey(User record);
+	int updateByPrimaryKey(User record);
+
+	User selectByUsername(String username);
 }

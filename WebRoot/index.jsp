@@ -24,20 +24,20 @@
 <body>
 	<h2>记录日志</h2>
 	<div style="margin:20px 0;"></div>
-	<form action="login.action" method="post" id="form">
+	<form action="login.form" method="post" id="form">
 		<div class="easyui-panel" title="Login to system  ${requestScope.errormsg }"
 			style="width:400px;padding:30px 70px 20px 70px">
 			<div style="margin-bottom:10px">
 				<input class="easyui-textbox"
 					style="width:100%;height:40px;padding:12px"
 					data-options="prompt:'Username',iconCls:'icon-man',iconWidth:38"
-					name="user.username">
+					name="username">
 			</div>
 			<div style="margin-bottom:20px">
 				<input class="easyui-textbox" type="password"
 					style="width:100%;height:40px;padding:12px"
 					data-options="prompt:'Password',iconCls:'icon-lock',iconWidth:38"
-					name="user.password">
+					name="password">
 			</div>
 			<div>
 				<a onclick="form.submit();" class="easyui-linkbutton"
