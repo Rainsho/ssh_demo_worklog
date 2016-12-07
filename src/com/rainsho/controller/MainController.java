@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.rainsho.entity.LogWithBLOBs;
@@ -89,6 +90,13 @@ public class MainController {
 		service.updateLog(newlog);
 		findLogs(req);
 		return "/logs.jsp";
+	}
+
+	@RequestMapping("/json")
+	public @ResponseBody
+	List<LogWithBLOBs> jsonTest(HttpServletRequest req) {
+		User user = (User) req.getSession().getAttribute("LOGIN_USER");
+		return service.findByAdmin(user);
 	}
 
 }
