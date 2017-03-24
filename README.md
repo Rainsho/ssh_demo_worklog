@@ -1,6 +1,6 @@
 # ssh_demo_worklog
 A Java SSH demo for wirtting daily work log.  
-test url: http://rainsho.cc:8080/log  
+test url: ~~http://rainsho.cc:8080/log~~(server temporary shutdown)  
 
 Front-end uses easy-ui, back-end uses SSH(Spring & Struts 2 & Hibernate) framework.  
 Administrator can add and update all records(test account&password: admin)  
