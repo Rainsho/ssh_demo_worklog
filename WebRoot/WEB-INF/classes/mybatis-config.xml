@@ -28,9 +28,9 @@
 				<!-- 数据库URL -->
 				<property name="url" value="jdbc:mysql://localhost:3306/etc_log" />
 				<!-- 数据库用户 -->
-				<property name="username" value="root" />
+				<property name="username" value="www-data" />
 				<!-- 密码 -->
-				<property name="password" value="rain@sql" />
+				<property name="password" value="www-data" />
 			</dataSource>
 		</environment>
 	</environments>
